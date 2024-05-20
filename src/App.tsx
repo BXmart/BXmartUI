@@ -3,9 +3,9 @@ import { Button } from './components';
 
 function App() {
   return (
-    <main>
-      {/* <Button>Botón</Button>
-      <Button loading>Botón</Button> */}
+    <main className='flex gap-2'>
+      <Button isLoading>Botón</Button>
+      <Button>Botón</Button>
     </main>
   );
 }
