@@ -8,4 +8,8 @@ export * from './Card/utils';
 export * from './Icons/IconLoading';
 export * from './Icons';
 export * from './Modal';
+export * from './Select';
 export * from './Slot';
+export * from './Title';
+export * from './Title/lib';
+export * from './Title/types';
