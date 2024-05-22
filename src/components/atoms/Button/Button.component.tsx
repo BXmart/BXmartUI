@@ -21,7 +21,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <span className='pointer-events-none flex shrink-0 items-center justify-center gap-1.5'>
             <IconLoading className='size-4 shrink-0' aria-hidden='true' />
             <span className='sr-only'>{loadingText ? loadingText : 'Cargando'}</span>
-            {loadingText ? loadingText : children}
+            {loadingText ? loadingText : 'Cargando'}
           </span>
         ) : (
           children
