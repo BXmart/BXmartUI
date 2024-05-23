@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import './App.css';
 import { Button, Card, Modal, Select, Title } from './components';
+
+import './App.css';
 
 const options = [
   { value: 'option1', label: 'Option 1' },
