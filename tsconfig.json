@@ -1,13 +1,6 @@
 {
   "compilerOptions": {
-    // Para archivos de declaraciones
-    "outDir": "dist",
     "target": "ES2020",
-    "declaration": true,
-    "allowJs": true,
-    "emitDeclarationOnly": false,
-    "declarationMap": false,
-
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
@@ -15,18 +8,19 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false,
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
+    "noEmit": true,
+    "declaration": true,
     "jsx": "react-jsx",
-
+    "typeRoots": ["./dist/index.d.ts"],
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
-  // "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

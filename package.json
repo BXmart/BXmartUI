@@ -1,8 +1,18 @@
 {
   "name": "bxmart-ui",
+  "description": "A collection of React components for BXmart",
   "private": false,
-  "version": "0.0.4",
+  "author": "BXmart",
+  "version": "0.0.7",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "keywords": [
     "bxmart",
     "ui",
@@ -15,7 +25,7 @@
     "url": "https://github.com/BXmart/BXmartUI"
   },
   "files": [
-    "dist/"
+    "dist"
   ],
   "release": {
     "branches": [
@@ -27,16 +37,27 @@
     "react-dom": "^18.3.1"
   },
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "pnpm run clean && tsc && pnpm run build-tailwind",
+    "dev": "storybook dev -p 6006",
+    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "build-tailwind": "npx tailwindcss -o ./dist/styles.css --minify",
+    "build-tailwind": "npx tailwindcss -o ./dist/index.css",
     "preview": "vite preview",
-    "clean": "rimraf dist/"
+    "clean": "rimraf dist/",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.4.0",
+    "@storybook/addon-essentials": "^8.1.3",
+    "@storybook/addon-interactions": "^8.1.3",
+    "@storybook/addon-links": "^8.1.3",
+    "@storybook/addon-onboarding": "^8.1.3",
+    "@storybook/blocks": "^8.1.3",
+    "@storybook/react": "^8.1.3",
+    "@storybook/react-vite": "^8.1.3",
+    "@storybook/test": "^8.1.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
@@ -46,8 +67,10 @@
     "eslint": "^9.3.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8.4.38",
     "rimraf": "^5.0.7",
+    "storybook": "^8.1.3",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "vite": "^5.2.11"

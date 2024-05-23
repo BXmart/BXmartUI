@@ -1,8 +1,12 @@
-export { Backdrop } from './components/atoms/Backdrop';
-export { Button, type ButtonProps } from './components/atoms/Button';
-export { Card } from './components/atoms/Card';
-export { IconClose, IconLoading } from './components/atoms/Icons';
-export { Modal } from './components/atoms/Modal';
-export { Select } from './components/atoms/Select';
-export { Slot } from './components/atoms/Slot';
-export { Title } from './components/atoms/Title';
+import { Backdrop } from './components/Backdrop';
+import { Button, type ButtonProps } from './components/Button';
+import { Card } from './components/Card';
+import { IconClose, IconLoading } from './components/Icons';
+import { Modal } from './components/Modal';
+import { Select } from './components/Select';
+import { Slot } from './components/Slot';
+import { Title } from './components/Title';
+
+import './index.css';
+
+export { Backdrop, Button, ButtonProps, Card, IconClose, IconLoading, Modal, Select, Slot, Title };

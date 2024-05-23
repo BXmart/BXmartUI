@@ -1,6 +1,7 @@
 import { MouseEvent, ReactNode, forwardRef, useEffect, useState } from 'react';
-import { Card, IconClose } from '..';
 import { Backdrop } from '../Backdrop';
+import { Card } from '../Card';
+import { IconClose } from '../Icons';
 
 interface ModalProps {
   children: ReactNode;

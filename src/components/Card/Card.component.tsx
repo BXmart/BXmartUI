@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slot } from '..';
+import { Slot } from '../Slot';
 import { cardStyle } from './utils';
 
 interface CardProps extends React.ComponentPropsWithoutRef<'div'> {
