@@ -43,5 +43,10 @@ export const getButtonVariant = (variant: ButtonVariants) => {
       'disabled:dark:bg-gray-800 disabled:dark:text-gray-600',
     ],
   };
-  return ButtonVariants.base + ' ' + ButtonVariants[variant].join(' ') || ButtonVariants.base;
+
+  if (!variant || !ButtonVariants[variant]) {
+    return ButtonVariants.base;
+  }
+
+  return ButtonVariants.base + ' ' + ButtonVariants[variant].join(' ');
 };
