@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const backdropBaseStyle = 'w-full h-full bg-slate-900/75 absolute top-0 left-0 flex justify-center items-center backdrop-blur-sm transition-opacity duration-200';
 
-interface BackdropProps {
+export interface BackdropProps {
   children: ReactNode;
   closeModal: (event: MouseEvent<HTMLDivElement>) => void;
 }

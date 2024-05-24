@@ -2,7 +2,7 @@ import React from 'react';
 import { Slot } from '../Slot';
 import { cardStyle } from './utils';
 
-interface CardProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface CardProps extends React.ComponentPropsWithoutRef<'div'> {
   asChild?: boolean;
 }
 

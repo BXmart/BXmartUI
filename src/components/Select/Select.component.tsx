@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface Option {
   value: string;
   label: string;
 }
 
-interface CustomSelectProps {
+export interface SelectProps {
   options: Option[];
   className?: string;
   onChange: (value: string) => void;
@@ -13,7 +13,7 @@ interface CustomSelectProps {
   placeholder?: string;
 }
 
-const CustomSelect: React.FC<CustomSelectProps> = ({ options, className, onChange, label, placeholder = 'Select an option' }) => {
+const CustomSelect: React.FC<SelectProps> = ({ options, className, onChange, label, placeholder = 'Select an option' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);

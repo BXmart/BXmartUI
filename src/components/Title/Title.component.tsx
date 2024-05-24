@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode, forwardRef } from 'react';
 import { TitleVariants, getTitleStyle } from '.';
 
-interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
+export interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
   as?: TitleVariants;
   children: ReactNode;
   className?: string;
