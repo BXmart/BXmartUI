@@ -13,7 +13,7 @@ export interface SelectProps {
   placeholder?: string;
 }
 
-const CustomSelect: React.FC<SelectProps> = ({ options, className, onChange, label, placeholder = 'Select an option' }) => {
+const CustomSelect: React.FC<SelectProps> = ({ options, className, onChange, label, placeholder = '...' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
