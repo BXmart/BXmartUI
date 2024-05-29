@@ -41,6 +41,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "storybook dev -p 6006",
+    "dev-test": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
