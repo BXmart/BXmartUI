@@ -1,4 +1,4 @@
-export interface InputProps {
+export type InputProps = {
   label: string;
   type?: 'text' | 'password' | 'email' | 'tel' | 'number';
   name?: string;
@@ -19,4 +19,4 @@ export interface InputProps {
   landing?: boolean;
   step?: string;
   valueText?: string;
-}
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'onBlur' | 'onFocus' | 'onChange'>;
